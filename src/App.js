@@ -3,32 +3,16 @@ import './App.css';
 import UserItem from './components/UserItem';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import UserListPage from './pages/UserListPage';
 
 function App() {
-  const users = [{
-      id: 1,
-      name: 'Adele Vance',
-      role: 'Software Engineer',
-      location: 'Seattle, WA',
-      description: 'Building scalable applications and cloud infrastructure.',
-      image: 'img/Adele%20Vance.jpg'
-    },
-    {
-      id: 2,
-      name: 'Alex Wilber',
-      role: 'Senior Product Designer',
-      location: 'San Francisco, CA',
-      description: 'Designing the future of collaboration tools and digital experiences.',
-      image: 'img/Alex%20Wilber.jpg'
-    }
-  ];
-
+  //TODO1: Completar componente UsuarioItem
+  //TODO2: Generar un componente de pagina para el UserInfo
   
   return (
     <div>
       <Header />
-      <UserItem user={users[0]} />
-      <UserItem user={users[1]} />
+      <UserListPage />
       <Footer />
     </div>
   );
