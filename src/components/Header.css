@@ -1,0 +1,12 @@
+/* ========================================
+   CABECERA DEL SITIO
+   ======================================== */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 16px 24px;
+}
+
+.site-header h1 {
+  margin: 0;
+}
