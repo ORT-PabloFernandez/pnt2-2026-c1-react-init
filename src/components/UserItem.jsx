@@ -12,20 +12,27 @@ function UserItem({ user }){
         setLikes(likes + 1);
     }
 
+    const id = user['Object Id'];
+    const name = user['Display name'];
+    const role = user['Title'];
+    const location = user['City'] + ", " + user['State'];
+    const image = user['Picture'];
+
+
     return(
         <li className = "user-item">
             <img 
-                alt={"Avatar de " + user.name}
+                alt={"Avatar de " + name}
                 className = "user-photo"
-                src={user.image}
+                src={image}
             />
             <div className="user-info">
-                <h3>{user.name}</h3>
-                <p className="user-role">{user.role}</p>
-                <p className="user-location">{user.location}</p>
-                <p className="user-description">{user.description}</p>
+                <h3>{name}</h3>
+                <p className="user-role">{role}</p>
+                <p className="user-location">{location}</p>
+                <p className="user-description">{user['Department']}</p>
                 <div className="user-actions">
-                    <Link to={"/user/" + user.id}>Ver perfil</Link>
+                    <Link to={"/user/" + id}>Ver perfil</Link>
                     {/* // TODO: Convertir el boton en un corazon con un contador de likes */}
                     <button onClick={handleLike} >
                         Me gusta {likes}  
