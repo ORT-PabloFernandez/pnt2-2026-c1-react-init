@@ -1,10 +1,17 @@
-import { Link } from "react-router-dom";
 import "./UserItem.css";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function UserItem({ user }){
     
     // Esto que sigue es el JSX
     // Resolución de ejercicio TODO: Completar el componente de usuario.
+    const [likes, setLikes] = useState(0);
+
+    function handleLike(){
+        setLikes(likes + 1);
+    }
+
     return(
         <li className = "user-item">
             <img 
@@ -19,7 +26,10 @@ function UserItem({ user }){
                 <p className="user-description">{user.description}</p>
                 <div className="user-actions">
                     <Link to={"/user/" + user.id}>Ver perfil</Link>
-                    <a href="#">Contactar</a>
+                    {/* // TODO: Convertir el boton en un corazon con un contador de likes */}
+                    <button onClick={handleLike} >
+                        Me gusta {likes}  
+                    </button>                                    
                 </div>
             </div>
         </li>

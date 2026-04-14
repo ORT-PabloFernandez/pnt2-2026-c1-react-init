@@ -75,6 +75,46 @@
 }
 
 /* ========================================
+   BOTONES DE INTERACCIÓN CON ICONOS (useState)
+   ======================================== */
+.btn-like,
+.btn-follow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.btn-like:hover {
+  border-color: #e04040;
+  color: #e04040;
+}
+
+.btn-like.liked {
+  border-color: #e04040;
+  background-color: #fff5f5;
+  color: #e04040;
+}
+
+.btn-follow:hover {
+  border-color: #2b4bee;
+  color: #2b4bee;
+}
+
+.btn-follow.following {
+  background-color: #2b4bee;
+  border-color: #2b4bee;
+  color: #ffffff;
+}
+
+/* ========================================
    DISEÑO RESPONSIVO
    ======================================== */
 @media (max-width: 640px) {
