@@ -4,9 +4,10 @@ import { useState } from "react";
 
 function UserItem({ user }){
     
-    // Esto que sigue es el JSX
-    // Resolución de ejercicio TODO: Completar el componente de usuario.
     const [likes, setLikes] = useState(0);
+
+    // Ejercicio 1: estado para expandir/contraer información adicional
+    const [expanded, setExpanded] = useState(false);
 
     function handleLike(){
         setLikes(likes + 1);
@@ -31,12 +32,25 @@ function UserItem({ user }){
                 <p className="user-role">{role}</p>
                 <p className="user-location">{location}</p>
                 <p className="user-description">{user['Department']}</p>
+
+                {/* Ejercicio 1: info extra visible solo cuando expanded === true */}
+                {expanded && (
+                    <div className="user-extra">
+                        <p><strong>Email:</strong> {user['User principal name']}</p>
+                        <p><strong>Teléfono:</strong> {user['Phone number']}</p>
+                        <p><strong>Oficina:</strong> {user['Office']}</p>
+                    </div>
+                )}
+
                 <div className="user-actions">
                     <Link to={"/user/" + id}>Ver perfil</Link>
-                    {/* // TODO: Convertir el boton en un corazon con un contador de likes */}
-                    <button onClick={handleLike} >
-                        Me gusta {likes}  
-                    </button>                                    
+                    {/* Ejercicio 1: botón toggle */}
+                    <button className="btn-expand" onClick={() => setExpanded(!expanded)}>
+                        {expanded ? 'Ver menos' : 'Ver más'}
+                    </button>
+                    <button className={"btn-like" + (likes > 0 ? " liked" : "")} onClick={handleLike}>
+                        {likes > 0 ? '❤️' : '🤍'} {likes}
+                    </button>
                 </div>
             </div>
         </li>

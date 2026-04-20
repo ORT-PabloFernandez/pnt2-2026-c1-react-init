@@ -17,10 +17,92 @@
 }
 
 /* ========================================
+   EJERCICIO 2: INPUT DE BÚSQUEDA
+   ======================================== */
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2b4bee;
+}
+
+.no-results {
+  color: #888;
+  text-align: center;
+  padding: 24px 0;
+}
+
+/* ========================================
+   EJERCICIO 3: BOTÓN TOGGLE VISTA
+   ======================================== */
+.btn-toggle-view {
+  background: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+}
+
+.btn-toggle-view:hover {
+  border-color: #2b4bee;
+  color: #2b4bee;
+}
+
+/* ========================================
    LISTA DE USUARIOS
    ======================================== */
 .user-list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+/* Ejercicio 3: vista grid */
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.user-grid .user-item {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.user-grid .user-photo {
+  width: 80px;
+  height: 80px;
+}
+
+/* ========================================
+   EJERCICIO 4: BOTÓN CARGAR MÁS
+   ======================================== */
+.btn-load-more {
+  display: block;
+  margin: 24px auto 0;
+  padding: 10px 32px;
+  background-color: #2b4bee;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-load-more:hover {
+  background-color: #1a3ac4;
 }

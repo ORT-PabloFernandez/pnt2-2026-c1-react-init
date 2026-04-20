@@ -63,3 +63,71 @@
   margin: 0;
   line-height: 1.6;
 }
+
+/* ========================================
+   EJERCICIO 5: SECCIÓN DE POSTS
+   ======================================== */
+.user-posts {
+  margin-top: 24px;
+  padding: 24px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.user-posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.user-posts-header h3 {
+  margin: 0;
+}
+
+.btn-reload-posts {
+  background: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.btn-reload-posts:hover {
+  border-color: #2b4bee;
+  color: #2b4bee;
+}
+
+.posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-item {
+  padding: 14px;
+  background-color: #ffffff;
+  border: 1px solid #e9e9e9;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.post-item strong {
+  display: block;
+  text-transform: capitalize;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.post-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.posts-error {
+  color: #dc3545;
+}

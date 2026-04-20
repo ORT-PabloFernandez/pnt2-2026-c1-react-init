@@ -115,6 +115,38 @@
 }
 
 /* ========================================
+   EJERCICIO 1: INFO EXTRA (expandir/contraer)
+   ======================================== */
+.user-extra {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.user-extra p {
+  margin: 4px 0;
+}
+
+.btn-expand {
+  background: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #555;
+  margin-right: 12px;
+  transition: all 0.2s ease;
+}
+
+.btn-expand:hover {
+  border-color: #2b4bee;
+  color: #2b4bee;
+}
+
+/* ========================================
    DISEÑO RESPONSIVO
    ======================================== */
 @media (max-width: 640px) {
